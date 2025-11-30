@@ -1,0 +1,189 @@
+/**
+ * Konek Documentation - Custom Styles
+ * Based on design guidelines at /docs/design-guidelines.md
+ */
+
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Primary Colors - Blue */
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+
+  /* Typography */
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --ifm-heading-font-family: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Font Sizes */
+  --ifm-code-font-size: 95%;
+  --ifm-h1-font-size: 2.25rem;
+  --ifm-h2-font-size: 1.875rem;
+  --ifm-h3-font-size: 1.5rem;
+  --ifm-h4-font-size: 1.25rem;
+
+  /* Line Height */
+  --ifm-line-height-base: 1.75;
+  --ifm-heading-line-height: 1.25;
+
+  /* Spacing */
+  --ifm-spacing-horizontal: 1rem;
+  --ifm-spacing-vertical: 1rem;
+
+  /* Border Radius */
+  --ifm-global-radius: 0.375rem;
+  --ifm-code-border-radius: 0.5rem;
+
+  /* Navbar */
+  --ifm-navbar-height: 60px;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  /* Sidebar */
+  --ifm-sidebar-width: 280px;
+
+  /* Code highlighting */
+  --docusaurus-highlighted-code-line-bg: rgba(37, 99, 235, 0.1);
+
+  /* Admonitions */
+  --ifm-alert-border-left-width: 4px;
+}
+
+/* Dark mode */
+[data-theme='dark'] {
+  --ifm-color-primary: #60a5fa;
+  --ifm-color-primary-dark: #3b82f6;
+  --ifm-color-primary-darker: #2563eb;
+  --ifm-color-primary-darkest: #1d4ed8;
+  --ifm-color-primary-light: #93c5fd;
+  --ifm-color-primary-lighter: #bfdbfe;
+  --ifm-color-primary-lightest: #dbeafe;
+
+  --ifm-background-color: #18181b;
+  --ifm-background-surface-color: #27272a;
+  --ifm-navbar-background-color: #18181b;
+  --ifm-footer-background-color: #18181b;
+
+  --docusaurus-highlighted-code-line-bg: rgba(96, 165, 250, 0.15);
+}
+
+/* Global Styles */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: var(--ifm-navbar-shadow);
+}
+
+.navbar__title {
+  font-weight: 600;
+}
+
+/* Sidebar */
+.menu__link {
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--ifm-global-radius);
+}
+
+.menu__link--active {
+  font-weight: 500;
+}
+
+/* DocCard */
+.card {
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Admonitions */
+.admonition {
+  border-radius: var(--ifm-global-radius);
+  margin-bottom: 1.5rem;
+}
+
+/* Code blocks */
+.prism-code {
+  border-radius: var(--ifm-code-border-radius);
+}
+
+/* Tables */
+table {
+  display: table;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+table th {
+  background-color: var(--ifm-table-head-background);
+  font-weight: 600;
+}
+
+table td, table th {
+  padding: 0.75rem 1rem;
+}
+
+/* Footer */
+.footer {
+  padding: 2rem 0;
+}
+
+.footer__title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Mobile Responsive */
+@media (max-width: 996px) {
+  :root {
+    --ifm-h1-font-size: 1.875rem;
+    --ifm-h2-font-size: 1.5rem;
+    --ifm-h3-font-size: 1.25rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .navbar, .footer, .pagination-nav {
+    display: none;
+  }
+}

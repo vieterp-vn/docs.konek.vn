@@ -38,6 +38,9 @@ yarn-error.log*
 
 # Screenshots (generated)
 docs/screenshots/
+static/img/screenshots/**/index.md
 
 # Logs
 logs.txt
+plans/
+scripts/

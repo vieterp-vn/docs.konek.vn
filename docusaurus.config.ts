@@ -74,12 +74,7 @@ const config: Config = {
         },
         {
           href: 'https://konek.vn',
-          label: 'Konek App',
-          position: 'left',
-        },
-        {
-          href: 'https://beta.konek.vn',
-          label: 'Konek Business',
+          label: 'Konek VN',
           position: 'left',
         },
         {
@@ -100,16 +95,12 @@ const config: Config = {
           title: 'Tài liệu',
           items: [
             {
-              label: 'Bắt đầu',
-              to: '/',
+              label: 'Konek Portal',
+              to: '/konek-portal/overview',
             },
             {
-              label: 'Quản lý doanh nghiệp',
-              to: '/features/businesses/overview',
-            },
-            {
-              label: 'Helpdesk',
-              to: '/features/helpdesk/overview',
+              label: 'Konek Wholesale',
+              to: '/konek-wholesale/overview',
             },
           ],
         },
@@ -117,12 +108,8 @@ const config: Config = {
           title: 'Sản phẩm',
           items: [
             {
-              label: 'Konek App',
+              label: 'Konek VN',
               href: 'https://konek.vn',
-            },
-            {
-              label: 'Konek Business',
-              href: 'https://beta.konek.vn',
             },
           ],
         },

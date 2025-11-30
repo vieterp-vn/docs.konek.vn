@@ -7,61 +7,124 @@ const sidebars: SidebarsConfig = {
       id: 'intro',
       label: 'Giới thiệu',
     },
+    // === KONEK PORTAL (konek.vn) ===
     {
       type: 'category',
-      label: 'Bắt đầu',
+      label: 'Konek Portal',
       collapsed: false,
+      link: {
+        type: 'doc',
+        id: 'konek-portal/overview',
+      },
       items: [
-        'getting-started/quick-start',
-        'getting-started/create-account',
-        'getting-started/first-business',
+        {
+          type: 'category',
+          label: 'Bắt đầu',
+          collapsed: false,
+          items: [
+            'konek-portal/getting-started/create-account',
+            'konek-portal/getting-started/choose-plan',
+            'konek-portal/getting-started/setup-tenant',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Thanh toán',
+          items: [
+            'konek-portal/billing/plans',
+            'konek-portal/billing/payment',
+            'konek-portal/billing/invoices',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Tài khoản',
+          items: [
+            'konek-portal/account/profile',
+            'konek-portal/account/security',
+          ],
+        },
       ],
     },
+    // === KONEK WHOLESALE (beta.konek.vn) ===
     {
       type: 'category',
-      label: 'Quản lý doanh nghiệp',
+      label: 'Konek Wholesale',
+      collapsed: false,
+      link: {
+        type: 'doc',
+        id: 'konek-wholesale/overview',
+      },
       items: [
-        'features/businesses/overview',
-        'features/businesses/create',
-        'features/businesses/settings',
+        'konek-wholesale/setup-guide',
+        {
+          type: 'category',
+          label: 'Khách hàng',
+          items: [
+            'konek-wholesale/customers/overview',
+            'konek-wholesale/customers/create',
+            'konek-wholesale/customers/b2b-customers',
+            'konek-wholesale/customers/credit-limits',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Bán hàng',
+          items: [
+            'konek-wholesale/sales/overview',
+            'konek-wholesale/sales/quotations',
+            'konek-wholesale/sales/orders',
+            'konek-wholesale/sales/returns',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Kho vận',
+          items: [
+            'konek-wholesale/inventory/overview',
+            'konek-wholesale/inventory/products',
+            'konek-wholesale/inventory/stock',
+            'konek-wholesale/inventory/operations',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Giao hàng',
+          items: [
+            'konek-wholesale/delivery/overview',
+            'konek-wholesale/delivery/trips',
+            'konek-wholesale/delivery/carriers',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Giá cả',
+          items: [
+            'konek-wholesale/pricing/overview',
+            'konek-wholesale/pricing/pricelists',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Kế toán',
+          items: [
+            'konek-wholesale/accounting/overview',
+            'konek-wholesale/accounting/payments',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Báo cáo',
+          items: [
+            'konek-wholesale/reports/overview',
+            'konek-wholesale/reports/sales',
+            'konek-wholesale/reports/debt',
+            'konek-wholesale/reports/inventory',
+          ],
+        },
       ],
     },
-    {
-      type: 'category',
-      label: 'Quản lý nhóm',
-      items: [
-        'features/team/overview',
-        'features/team/invite-members',
-        'features/team/roles-permissions',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Helpdesk',
-      items: [
-        'features/helpdesk/overview',
-        'features/helpdesk/create-ticket',
-        'features/helpdesk/manage-tickets',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Hóa đơn',
-      items: [
-        'features/invoicing/overview',
-        'features/invoicing/create-invoice',
-        'features/invoicing/manage-invoices',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Cài đặt',
-      items: [
-        'features/settings/profile',
-        'features/settings/notifications',
-        'features/settings/security',
-      ],
-    },
+    // === HỖ TRỢ ===
     {
       type: 'category',
       label: 'Hỗ trợ',
